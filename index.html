@@ -1,4 +1,147 @@
+<html>
+  <head>
+    <script>
+      @import url('https://fonts.googleapis.com/css?family=Raleway:300,500&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap')
 
+$bg-color: #534551
+$dark: #4e4b43
+$lightgold: rgba(245,208,169,1)
+$darkgold: rgba(197,133,104,1)
+$font-main: 'Raleway', sans-serif
+$font-accent: 'Playfair Display', serif
+
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body 
+  background: $bg-color
+  font-family: $font-main
+  zoom: 75%
+
+
+h1, h2
+  color: $dark
+  
+h1
+  font-weight: 500
+  text-transform: uppercase
+  font-size: 1.5rem
+  letter-spacing: 4px
+  
+h2
+  font-weight: 300
+  font-size: 1rem
+  letter-spacing: 2px
+  
+.large-font
+  font-size: 2.5rem
+  
+.gold-gradient
+  background: -webkit-linear-gradient($lightgold, $darkgold)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  
+.accent-font
+  font-family: 'Playfair Display', serif
+  
+.one h2 
+  margin-bottom: 40px 
+
+.one h1:nth-of-type(2)
+  margin-top: 10px
+  
+.two 
+  line-height: 30px
+  padding: 20px 0
+  
+.one
+  padding-bottom: 25px
+  
+.two, .three, .four, .five
+  padding: 25px 0
+  
+.date
+  display: grid
+  width: 100px
+  margin: 10px auto
+  grid-template-areas: "year-one day year-two"
+  
+  & h2
+    color: rgba(197,133,104,1)
+    font-weight: bold
+  
+  & .day h2
+    font-size: 2.5rem
+    line-height: 2.5rem
+  
+.four h1:nth-of-type(1), .four h1:nth-of-type(2)
+  color: $darkgold
+  font-weight: bold
+  
+.four h1:nth-of-type(2)
+  margin-bottom: 20px
+  
+.five h1
+  font-size: 1.25rem
+  
+.five h1:nth-of-type(2)
+  font-size: 2rem
+  color: $darkgold
+  margin: 30px 0
+  
+.five h2
+  font-size: 1rem
+
+/* LAYOUT */
+
+.container
+  box-sizing: border-box
+  width: 850px
+  height: 1200px
+  margin: 20px auto
+  background-image:  url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-594540-png.png"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/paperboard-texture_95678-72.jpg") 
+  box-shadow: 10px 10px 20px rgba(0,0,0,.3)
+  
+.contents
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: 1fr .2fr .5fr 1fr
+  grid-template-areas: "one one" "two two" "three four" "five five"
+  padding-top: 300px
+  text-align: center
+  width: 60%
+  margin: 0 auto
+
+.one
+  grid-area: one
+  
+.two
+  grid-area: two
+  border-top: 2px solid lighten($dark, 50%)
+
+.three
+  grid-area: three
+  border-top: 2px solid lighten($dark, 50%)
+  border-bottom: 2px solid lighten($dark, 50%)
+
+.four
+  grid-area: four
+  border-top: 2px solid lighten($dark, 50%)
+  border-left: 2px solid lighten($dark, 50%)
+  border-bottom: 2px solid lighten($dark, 50%)
+  
+.five
+  grid-area: five
+ 
+  
+  
+    </script>
+  </head>
+  <body>
 <div class="container">
   <div class="contents">
     <div class="one">
@@ -43,3 +186,5 @@
     </div>
   </div>
 </div>
+    </body>
+</html>
